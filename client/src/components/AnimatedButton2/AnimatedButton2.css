@@ -1,0 +1,60 @@
+.animatebtn-container2 {
+    background-color: transparent;
+    display: inline-flex;
+    border: 0.1px solid #5b5b5f;
+    align-items: center;
+    gap: 12px;
+    font-weight: 500;
+    padding: 6px 7px 6px 4px;
+    position: relative;
+    width: max-content;
+    cursor: pointer;
+    overflow: hidden;
+    transition: color 0.3s ease;
+    border-radius: 2.5px;
+}
+
+.animatebtn-container2 span:first-child {
+    padding-left: 12px;
+    font-weight: 400;
+    font-size: 15px;
+    color: #ffffff;
+}
+
+.animatebtn-container2 span:last-child {
+    margin-top: 2px;
+    background-color: #ffffff33;
+    padding: 6px 6px 2px 6px;
+    border-radius: 2px;
+    position: relative;
+    z-index: 2;
+    fill: white;
+}
+
+.animatebtn-container2::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: #8232FF;
+    transform: scaleX(0);
+    transform-origin: left;
+    transition: transform 0.4s ease;
+}
+
+
+.animatebtn-container2:hover::before {
+    transform: scaleX(1);
+}
+
+.animatebtn-container2:hover {
+    color: white;
+}
+
+.animatebtn-container2:hover span:last-child {
+    background-color: #ffffff33;
+}
+
+.animatebtn-container2 span:first-child {
+    position: relative;
+    z-index: 2;
+}

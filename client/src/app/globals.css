@@ -1,0 +1,31 @@
+* {
+  margin: 0;
+  padding: 0px;
+  box-sizing: border-box;
+}
+
+:root {
+  --purple-Color: #8232FF;
+}
+
+body {
+  width: 100%;
+  font-family: 'Switzer', sans-serif;
+}
+
+@font-face {
+  font-family: 'Switzer';
+  src: url(/fonts/Switzer-Regular.otf);
+}
+
+@font-face {
+  font-family: 'Mozilla Headline';
+  src: url(/fonts/MozillaHeadline_Condensed-Regular.ttf);
+}
+
+@media screen and (min-width : 1400px) {
+  .desktop-width {
+    width: 1300px;
+    margin: auto;
+  }
+}

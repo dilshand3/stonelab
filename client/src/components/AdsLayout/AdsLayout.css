@@ -1,0 +1,31 @@
+.adslayout-container {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    gap: 49px;
+}
+
+.adslayout-container>div{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.adslayout-container>div>svg {
+    fill: #8232FF;
+}
+
+.adslayout-container h4 {
+    color: #ffffff;
+    font-family: 'Switzer', sans-serif;
+    font-size: 17px;
+    letter-spacing: 1.5;
+    font-weight: bold;
+}
+
+.adslayout-container p{
+    color:#bfbec6 ;
+    font-size: 15px;
+}

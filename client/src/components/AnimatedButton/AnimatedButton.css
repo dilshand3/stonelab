@@ -1,0 +1,58 @@
+.animatebtn-container {
+    background-color: #FFFFFF;
+    display: inline-flex;
+    align-items: center;
+    gap: 12px;
+    font-weight: 500;
+    padding: 6px 4px 6px 4px;
+    position: relative;
+    width: max-content;
+    border: none;
+    cursor: pointer;
+    overflow: hidden;
+    transition: color 0.3s ease;
+    border-radius: 2.5px;
+}
+
+.animatebtn-container span:first-child {
+    padding-left: 12px;
+    font-weight: 400;
+    font-size: 15px;
+}
+
+.animatebtn-container span:last-child {
+    background-color: #e5e5e5;
+    padding: 7px 6px 4px 7px;
+    border-radius: 2px;
+    position: relative;
+    z-index: 2;
+}
+
+.animatebtn-container::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: #8232FF;
+    transform: scaleX(0);
+    transform-origin: left;
+    transition: transform 0.4s ease;
+}
+
+
+.animatebtn-container:hover::before {
+    transform: scaleX(1);
+}
+
+.animatebtn-container:hover {
+    color: white;
+}
+
+.animatebtn-container:hover span:last-child {
+    background-color: #ffffff33;
+}
+
+.animatebtn-container span:first-child {
+    position: relative;
+    z-index: 2;
+}
+
