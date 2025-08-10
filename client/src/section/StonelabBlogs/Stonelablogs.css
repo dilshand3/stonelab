@@ -1,0 +1,63 @@
+.stonelabblogs-container {
+    padding: 20px 18px 20px 18px;
+    display: grid;
+    justify-items: reverse;
+    grid-template-columns: 1fr;
+    row-gap: 20px;
+}
+
+.stonelabblogs-container div:nth-child(2) {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    grid-row: 1/2;
+}
+
+.stonelabblogs-container p {
+    font-size: 20px;
+    color: #d4d2d8;
+    line-height: 1.6;
+    letter-spacing: 0.5px;
+}
+
+.stonelabblogs-container p span {
+    transition: color 0.1s ease-out;
+    display: inline-block;
+}
+
+.stonelabblogs-container>img {
+    height: 320px;
+    width: 100%;
+    border-radius: 8px;
+}
+
+.stonelabblogs-container .founder-title {
+    display: flex;
+    flex-direction: column;
+    margin: 10px 0px 10px 0px;
+}
+
+.stonelabblogs-container .founder-title big:nth-child(1) {
+    font-weight: 600;
+    letter-spacing: 1.2;
+}
+
+@media screen and (min-width:900px) {
+    .stonelabblogs-container {
+        padding: 50px 63px 20px 63px;
+        grid-template-columns: 1fr 1fr;
+        column-gap: 130px;
+    }
+
+    .stonelabblogs-container p {
+        font-size: 26px;
+    }
+
+    .stonelabblogs-container div:nth-child(2) {
+        grid-column: 2/3;
+    }
+
+    .stonelabblogs-container>img {
+        height: 520px;
+    }
+}

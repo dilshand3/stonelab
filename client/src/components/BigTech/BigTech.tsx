@@ -30,27 +30,6 @@ const BigTech: FC = () => {
                     className='bigtechSvg'
                 />
             </div>
-            {/* <Image
-                src={"/meta.svg"}
-                alt='metasvg'
-                height={0}
-                width={0}
-                className='bigtechSvg'
-            />
-            <Image
-                src={"/expensify.svg"}
-                alt='metasvg'
-                height={0}
-                width={0}
-                className='bigtechSvg'
-            />
-            <Image
-                src={"/amazon.svg"}
-                alt='metasvg'
-                height={0}
-                width={0}
-                className='bigtechSvg'
-            /> */}
         </div>
     )
 }
