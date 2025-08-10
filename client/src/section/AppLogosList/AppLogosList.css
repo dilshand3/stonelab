@@ -1,3 +1,30 @@
-.applogoList-container{
-    padding: 20px 63px 20px 63px;
+.applogoList-container {
+    padding: 30px 18px 20px 18px;
+}
+
+.applogoList-container .applogoList-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+    row-gap: 20px;
+    column-gap: 20px;
+}
+
+.img-container {
+    width: max-content;
+    padding: 0px 20px 0px 20px;
+}
+
+@media screen and (min-width:900px) {
+    .applogoList-container {
+        padding: 30px 63px 20px 63px;
+    }
+
+    .applogoList-container .applogoList-grid {
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    }
+
+    .img-container {
+        width: max-content;
+        padding: 0px 30px 0px 30px;
+    }
 }

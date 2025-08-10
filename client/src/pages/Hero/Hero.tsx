@@ -30,13 +30,13 @@ const Hero: FC = () => {
     }, [showMenu]);
 
     return (
-        <div className='heroContainer desktop-width'>
+        <div className='heroContainer '>
             <Header />
             <MobileHeader />
             <MobMenu />
             <ServiceDailaugeBox show={showServiceDailaugeBox} />
             <AboutusDailaugeBox show={showAboutusDailaugeBox} />
-            <section className='hero-section'>
+            <section className='hero-section desktop-width'>
                 <h1>
                     Your Web & Mobile Application Development Experts.
                 </h1>
@@ -59,7 +59,7 @@ const Hero: FC = () => {
                     </div>
                 </div>
             </section>
-             <section className='adslayout-section'>
+             <section className='adslayout-section desktop-width'>
                 {
                     AdsLayoutData.map((val, index) => (
                         <AdsLayout

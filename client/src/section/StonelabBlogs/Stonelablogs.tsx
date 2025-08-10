@@ -50,7 +50,7 @@ const Stonelablogs: FC = () => {
     }, []);
 
     return (
-        <div className='stonelabblogs-container'>
+        <div className='stonelabblogs-container desktop-width'>
             <Image
                 src={"/zaheer.jpg"}
                 height={100}

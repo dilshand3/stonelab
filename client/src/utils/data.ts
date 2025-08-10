@@ -27,6 +27,19 @@ export const AdsLayoutData: IAdslayout[] = [
     }
 ]
 
+export const applogoDataList = [
+    '/img/maricota.svg',
+    '/img/directtv.svg',
+    '/img/evernote.svg',
+    '/img/futurewei.svg',
+    '/img/ebm.svg',
+    '/img/ticketmaster.svg',
+    '/expensify.svg',
+    '/img/musashi-1.svg',
+    '/img/vodafone-passo.svg',
+    '/img/autoozone.svg'
+]
+
 export const listItemData: IListItem[] = [
     {
         title: 'Service',
