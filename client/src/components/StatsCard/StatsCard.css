@@ -1,0 +1,45 @@
+.statsCard-container {
+    width: 100%;
+    border: 0.1px dashed #d1d5db;
+    border-radius: 3px;
+    padding: 10px 20px;
+}
+
+.statsCard-container>span {
+    font-size: 30px;
+}
+
+.statsCard-Content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.statsCard-description {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.statsCard-line>span {
+    color: #8232FF;
+    font-size: 37px;
+}
+
+@media screen and (min-width:900px) {
+    .statsCard-container {
+        padding: 20px 30px;
+        width: 460px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+    }
+
+    .statsCard-container>span {
+        font-size: 80px;
+    }
+
+    .statsCard-Content {
+        margin-bottom: 19px;
+    }
+}

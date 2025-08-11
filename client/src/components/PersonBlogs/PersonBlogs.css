@@ -1,0 +1,93 @@
+.personBlogs-container {
+    border: 1px dashed #d1d5db;
+    padding: 32px;
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 20px;
+    width: 100%;
+    background: #ffffff;
+    border-radius: 4px;
+    position: relative;
+}
+
+.blogs-paragraph {
+    font-size: 18px;
+    line-height: 1.5;
+    color: #1f2937;
+    font-weight: 400;
+    margin: 0;
+}
+
+.commaIcon {
+    position: absolute;
+    top: 57px;
+    right: 32px;
+    opacity: 0.15;
+    color: #9ca3af;
+}
+
+.author-section {
+    display: grid;
+    grid-template-columns: auto 1fr;
+    gap: 16px;
+    align-items: center;
+}
+
+.blogpersonImg {
+    border-radius: 50%;
+    object-fit: cover;
+    width: 60px;
+    height: 60px;
+}
+
+.blogUser-detail {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+}
+
+.author-name {
+    font-size: 18px;
+    font-weight: 600;
+    color: #1f2937;
+    margin: 0;
+}
+
+.author-position {
+    font-size: 14px;
+    color: #6b7280;
+    font-weight: 400;
+    text-transform: uppercase;
+    letter-spacing: 0.8px;
+    margin: 0;
+}
+
+@media screen and (min-width: 900px) {
+    .personBlogs-container {
+        width: 460px;
+        padding: 26px 20px;
+        gap: 35px;
+    }
+
+    .blogs-paragraph {
+        font-size: 18px;
+        line-height: 1.4;
+        padding-right: 84px;
+    }
+
+    .commaIcon {
+        height: 72px;
+        width: 72px;
+        top: 19px;
+        right: 35px;
+    }
+
+    .author-name {
+        font-size: 20px;
+    }
+
+    .author-position {
+        font-size: 15px;
+        letter-spacing: 1px;
+    }
+}

@@ -59,7 +59,7 @@ const Hero: FC = () => {
                     </div>
                 </div>
             </section>
-             <section className='adslayout-section desktop-width'>
+            <section className='adslayout-section desktop-width'>
                 {
                     AdsLayoutData.map((val, index) => (
                         <AdsLayout
@@ -73,38 +73,6 @@ const Hero: FC = () => {
                     ))
                 }
             </section>
-            {/* <section>
-                <div>
-                    <BigTech />
-
-                    <div>
-                        <AnimatedButton
-                            title='Hire us'
-                            path={icons.rightArrow.path}
-                            viewBox={icons.rightArrow.viewBox}
-                        />
-                        <AnimatedButton2
-                            title='Check all services'
-                            path={icons.rightArrow.path}
-                            viewBox={icons.rightArrow.viewBox}
-                        />
-                    </div>
-                </div>
-            </section>
-            <section className='adslayout-section'>
-                {
-                    AdsLayoutData.map((val, index) => (
-                        <AdsLayout
-                            key={index}
-                            title={val.title}
-                            para={val.para}
-                            path={val.path}
-                            viewBox={val.viewBox}
-                            buttonTitle={val.buttonTitle}
-                        />
-                    ))
-                }
-            </section> */}
         </div>
     )
 }

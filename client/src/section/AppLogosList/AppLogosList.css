@@ -4,9 +4,10 @@
 
 .applogoList-container .applogoList-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
     row-gap: 20px;
-    column-gap: 20px;
+    column-gap: 0px;
+    margin: 30px 0px 30px;
 }
 
 .img-container {

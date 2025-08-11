@@ -5,10 +5,8 @@
     align-items: center;
     width: 100%;
     flex-wrap: wrap;
-    border-top: 0.1px solid #87868c;
-    border-bottom: 0.1px solid #87868c;
-    border-top-style: dashed;
-    border-bottom-style: dashed;
+    border-top: 0.1px dashed #87868c;
+    border-bottom: 0.1px dashed #87868c;
     padding: 10px 0px;
 }
 
