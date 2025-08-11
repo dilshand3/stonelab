@@ -4,17 +4,19 @@ import SVGIcon from '../SVGIcon/SVGIcon';
 import { icons } from '../SVGIcon/svg';
 import Image from 'next/image';
 
-interface IPersonBlogs {
+export interface IPersonBlogs {
     paragraph: string;
     name: string;
     img: string;
     position: string;
 }
 
-const PersonBlogs: FC = () => {
+const PersonBlogs: FC<IPersonBlogs> = ({
+    paragraph, name, img, position
+}) => {
     return (
         <div className='personBlogs-container'>
-            <div className='blogs-paragraph'>We have the most experienced engineers in the Javascript community.</div>
+            <div className='blogs-paragraph'>{paragraph}</div>
             <SVGIcon
                 path={icons.comma.path}
                 viewBox={icons.comma.viewBox}
@@ -23,14 +25,14 @@ const PersonBlogs: FC = () => {
                 className='commaIcon' />
             <div className='author-section'>
                 <Image
-                    src={"/zaheer.jpg"}
+                    src={img}
                     alt='blogspersonImg'
                     height={50}
                     width={50}
                     className='blogpersonImg' />
                 <div className='blogUser-detail'>
-                    <div className='author-name'>Tom Occhino</div>
-                    <div className='author-position'>DIRECTOR OF ENGINEERING @ META</div>
+                    <div className='author-name'>{name}</div>
+                    <div className='author-position'>{position}</div>
                 </div>
             </div>
         </div>

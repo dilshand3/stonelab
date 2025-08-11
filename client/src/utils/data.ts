@@ -2,6 +2,7 @@ import { IAdslayout } from "@/components/AdsLayout/AdsLayout";
 import { IListItem } from "@/components/Header/Header";
 import { icons } from "@/components/SVGIcon/svg";
 import { IFooterList } from "@/components/FooterList/FooterList";
+import { IPersonBlogs } from "@/components/PersonBlogs/PersonBlogs";
 
 export const AdsLayoutData: IAdslayout[] = [
     {
@@ -89,4 +90,25 @@ export const footerlistData3: IFooterList = {
     listItem: [
         { text: 'reach us', route: '/reachus' }
     ]
+}
+
+export const PersonBlogsData1 : IPersonBlogs = {
+   name : "Nikhil bishnoi",
+   position : 'Software developer',
+   img : '/nikhil.png',
+   paragraph : 'Stonelab crafts affordable React Native apps. We cut costs, boost quality. New tools empower developers!'
+}
+
+export const PersonBlogsData2 : IPersonBlogs = {
+   name : "Apurva Ghormade",
+   position : 'CEO & Software Tester',
+   img : '/apurva.png',
+   paragraph : 'Stonelab delivers cheap, fast web solutions. JS/TS skills shine. Innovation drives us!'
+}
+
+export const PersonBlogsData3 : IPersonBlogs = {
+   name : "Dilshan hansal",
+   position : 'Founder & Software developer',
+   img : '/dilshan.png',
+   paragraph : 'Stonelab blends Node.js with React Native. Affordable tech supports developer growth!'
 }

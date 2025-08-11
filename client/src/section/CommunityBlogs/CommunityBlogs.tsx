@@ -4,6 +4,7 @@ import TitleTag from '@/components/TitleTag/TitleTag';
 import PersonBlogs from '@/components/PersonBlogs/PersonBlogs';
 import Image from 'next/image';
 import StatsCard from '@/components/StatsCard/StatsCard';
+import { PersonBlogsData1,PersonBlogsData2,PersonBlogsData3 } from '@/utils/data';
 
 const CommunityBlogs: FC = () => {
     return (
@@ -15,9 +16,13 @@ const CommunityBlogs: FC = () => {
                     JS & TS
                     Core Contributors Commuity
                 </div>
-                <PersonBlogs />
+                <PersonBlogs
+                {...PersonBlogsData1}
+                />
                 <StatsCard />
-                <PersonBlogs />
+                <PersonBlogs 
+                {...PersonBlogsData2}
+                />
                 <div className='communityBlog-cellFive'>
                     <Image
                         src={'/meta.svg'}
@@ -27,7 +32,9 @@ const CommunityBlogs: FC = () => {
                     />
 
                 </div>
-                <PersonBlogs />
+                <PersonBlogs
+                {...PersonBlogsData3}
+                />
             </section>
         </div>
     )
