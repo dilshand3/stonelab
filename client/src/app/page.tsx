@@ -4,7 +4,9 @@ import Hero from "@/pages/Hero/Hero";
 import { store } from "@/redux/store";
 import AppLogosList from "@/section/AppLogosList/AppLogosList";
 import CommunityBlogs from "@/section/CommunityBlogs/CommunityBlogs";
+import HeroSection2 from "@/section/HeroSection2/HeroSection2";
 import Stonelablogs from "@/section/StonelabBlogs/Stonelablogs";
+import HireusSection from "@/section/HireusSection/HireusSection";
 import { Provider } from "react-redux";
 
 export default function Home() {
@@ -14,6 +16,8 @@ export default function Home() {
       <Stonelablogs/>
       <AppLogosList/>
       <CommunityBlogs/>
+      <HeroSection2/>
+      {/* <HireusSection/> */}
     </Provider>
   );
 }

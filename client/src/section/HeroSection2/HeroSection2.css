@@ -1,0 +1,57 @@
+.heroSection2 {
+    padding: 10px 18px;
+}
+
+.heroSection2-container {
+    background-image: url('/bg3.png');
+    border-radius: 10px;
+    width: 100%;
+    padding: 30px 45px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 30px;
+}
+
+.heroSection2-title {
+    font-family: "Mozilla Headline", "Poppins", sans-serif;
+    font-weight: 500;
+    letter-spacing: 1.2px;
+    color: #ffffff;
+}
+
+.heroSection2-para {
+    color: #CAC9D1;
+    width: 100%;
+}
+
+.heroSection2-content {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.heroSection2-imagecontainer {
+    height: 44px;
+    width: 33px;
+}
+
+@media screen and (min-width:900px) {
+    .heroSection2-container {
+        padding: 70px 18px 70px 18px;
+    }
+
+    .heroSection2-content {
+        gap: 30px;
+    }
+
+    .heroSection2-imagecontainer {
+        height: 70px;
+        width: 70px;
+    }
+
+    .heroSection2-para {
+        width: 70%;
+    }
+}

@@ -101,7 +101,7 @@ export const PersonBlogsData1 : IPersonBlogs = {
 
 export const PersonBlogsData2 : IPersonBlogs = {
    name : "Apurva Ghormade",
-   position : 'CEO & Software Tester',
+   position : 'Software Tester',
    img : '/apurva.png',
    paragraph : 'Stonelab delivers cheap, fast web solutions. JS/TS skills shine. Innovation drives us!'
 }
@@ -112,3 +112,15 @@ export const PersonBlogsData3 : IPersonBlogs = {
    img : '/dilshan.png',
    paragraph : 'Stonelab blends Node.js with React Native. Affordable tech supports developer growth!'
 }
+
+export const HeroSection2Data = [
+    '/techlogo/leftBracket.svg',
+    '/techlogo/kotlin.svg',
+    '/techlogo/Nextjs.svg',
+    '/techlogo/node.svg',
+    '/techlogo/prismalogo.svg',
+    '/techlogo/react.svg',
+    '/techlogo/xLogo.svg',
+    '/techlogo/walogo.svg',
+    '/techlogo/rightBracket.svg',
+]
