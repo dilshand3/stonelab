@@ -21,7 +21,7 @@ const ImageSection: FC<{ src: string }> = ({ src }) => {
 
 const HeroSection2: FC = () => {
   return (
-    <div className='heroSection2'>
+    <div className='heroSection2 desktop-width'>
       <div className='heroSection2-container'>
         <TitleTag title='React Universe' />
         <h1 className='heroSection2-title'>We build apps in the React Universe</h1>

@@ -1,0 +1,119 @@
+.hireusSection-container {
+    padding: 30px 18px 30px 18px;
+    display: grid;
+    grid-template-columns: 1fr;
+    column-gap: 40px;
+    row-gap: 40px;
+    color: whitesmoke;
+}
+
+
+.hireusSection-one {
+    display: flex;
+    flex-direction: column;
+    gap: 22px;
+}
+
+.hireusSection-one>h1 {
+    font-family: "Mozilla Headline", "Poppins", sans-serif;
+    font-weight: 500;
+    letter-spacing: 1.2px;
+    color: #000000;
+}
+
+.hireusSection-one>p {
+    color: #838289;
+}
+
+.hireus-form {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    z-index: 4000;
+    flex-direction: column;
+}
+
+.hireus-form>form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 17px;
+    padding: 17px;
+    border-radius: 5px;
+    /* background: linear-gradient(135deg, #8f5de0 5%, #ab8ddb 40%, #9c88d6 100%); */
+    background-image: url(/bg3.png);
+}
+
+.hireus-form>form small {
+    width: 355px;
+    font-size: 11px;
+}
+
+.form-input {
+    display: flex;
+    flex-direction: column;
+    gap: 3px;
+}
+
+.form-input>input {
+    width: 355px;
+    height: 40px;
+    font-size: 16px;
+    padding: 0px 0px 0px 7px;
+    border-radius: 4px;
+    border: none;
+}
+
+.form-input>textarea {
+    width: 355px;
+    height: 100px;
+    font-size: 16px;
+    padding: 7px 0px 4px 7px;
+    resize: none;
+    border-radius: 4px;
+}
+
+.form-btn {
+    width: 355px;
+    height: 40px;
+    display: flex;
+    border-radius: 4px;
+    justify-content: space-between;
+    align-items: center;
+    font-weight: bold;
+    padding: 8px 12px;
+    background-color: black;
+    color: white;
+    fill: white;
+    border: none;
+    cursor: pointer;
+}
+
+@media screen and (min-width:900px) {
+    .hireusSection-container {
+        padding: 60px 63px 50px 63px;
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .hireusSection-one>h1 {
+        font-size: 50px;
+    }
+
+    .hireus-form>form {
+        padding: 40px;
+    }
+
+    .form-input>input {
+        width: 375px;
+    }
+
+    .form-input>textarea {
+        width: 375px;
+    }
+
+    .form-btn {
+        width: 375px;
+    }
+}

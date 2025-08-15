@@ -4,9 +4,11 @@
     position: fixed;
     background-color: pink;
     left: 25%;
-     opacity: 0;
+    opacity: 0;
     transition: 0.3s ease-in-out;
+    z-index: 10;
 }
-.showdailauge{
+
+.showdailauge {
     opacity: 1;
 }

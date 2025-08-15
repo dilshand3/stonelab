@@ -1,11 +1,11 @@
-import React, { FC, useState } from 'react';
+import React, { FC, useState, useEffect } from 'react';
 import "./Header.css";
 import SVGIcon from '../SVGIcon/SVGIcon';
 import { icons } from '../SVGIcon/svg';
 import AnimatedButton from '../AnimatedButton/AnimatedButton';
 import { listItemData } from '@/utils/data';
 import Link from 'next/link';
-import {  useDispatch } from 'react-redux';
+import { useDispatch } from 'react-redux';
 import { toggleServiceDailaugeBox, toggleAboutusDailaugeBox } from '@/redux/states/states';
 
 export interface IListItem {
@@ -13,16 +13,16 @@ export interface IListItem {
     route: string;
 }
 
-const ListItem: FC<IListItem & {
-    isAnyItemHovered: boolean;
-    isCurrentItemHovered: boolean;
-    onMouseEnter: () => void;
-    onMouseLeave: () => void;
+export const ListItem: FC<IListItem & {
+    isAnyItemHovered?: boolean;
+    isCurrentItemHovered?: boolean;
+    onMouseEnter?: () => void;
+    onMouseLeave?: () => void;
 }> = ({ title, route, isAnyItemHovered, isCurrentItemHovered, onMouseEnter, onMouseLeave }) => {
     const dispatch = useDispatch();
 
     const handleMouseEnter = () => {
-        onMouseEnter();
+        if (onMouseEnter) onMouseEnter();
         if (title.toLowerCase() === 'service' || title.toLowerCase() === 'services') {
             dispatch(toggleServiceDailaugeBox());
         } else if (title.toLowerCase().includes('about')) {
@@ -30,7 +30,7 @@ const ListItem: FC<IListItem & {
         }
     };
     const handleMouseLeave = () => {
-        onMouseLeave();
+        if (onMouseLeave) onMouseLeave();
         if (title.toLowerCase() === 'service' || title.toLowerCase() === 'services') {
             dispatch(toggleServiceDailaugeBox());
         } else if (title.toLowerCase().includes('about')) {
@@ -59,8 +59,56 @@ const ListItem: FC<IListItem & {
 
 const Header: FC = () => {
     const [hoveredItemIndex, setHoveredItemIndex] = useState<number | null>(null);
+    const [isScrolled, setIsScrolled] = useState<boolean>(false); 
+    const [isVisible, setIsVisible] = useState<boolean>(true);
+    const [lastScrollY, setLastScrollY] = useState<number>(0);
+    const [scrollDirection, setScrollDirection] = useState<'down' | 'up'>('down');
+
+    useEffect(() => {
+        const handleScroll = () => {
+            const currentScrollY = window.scrollY;
+
+            if (currentScrollY > lastScrollY) {
+                setScrollDirection('down');
+            } else {
+                setScrollDirection('up');
+            }
+
+            setIsScrolled(currentScrollY > 0);
+
+            if (currentScrollY === 0) {
+                setIsVisible(true);
+            } else if (scrollDirection === 'down' && currentScrollY > 0) {
+                setIsVisible(false);
+            } else if (scrollDirection === 'up' && currentScrollY > 0) {
+                setIsVisible(true);
+            }
+
+            setLastScrollY(currentScrollY);
+        }
+
+        setLastScrollY(window.scrollY);
+        window.addEventListener('scroll', handleScroll, {
+            passive: true
+        });
+
+        return () => window.removeEventListener('scroll', handleScroll);
+    }, [lastScrollY, scrollDirection]);
+
+    const getHeaderClasses = () => {
+        let classes = 'desktop-header-container desktop-width';
+        
+        if (!isVisible) {
+            classes += ' hidden';
+        } else if (isScrolled) {
+            classes += ' scrolled';
+        }
+        
+        return classes;
+    };
+
     return (
-        <div className='desktop-header-container desktop-width'>
+        <div className={getHeaderClasses()}>
             <span className="brand-logo">{"{stonelab}"}</span>
             <div className='navList'>
                 {
